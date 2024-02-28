@@ -50,9 +50,15 @@ body{
    transition: 0.3s ease;
 }
 
-.btn:hover{
+/*pokud button není disabled bude fungovat, pokud je disabled tak se vypne */
+
+.btn:hover:not([disabled]){
    background: #222;
    color: #fff;
+}
+
+.btn:disabled{
+   cursor: no-drop;
 }
 
 #next-btn{
@@ -66,4 +72,12 @@ body{
    border-radius: 4px;
    cursor: pointer;
    display: none;
+}
+
+.correct{
+   background: #9aeabc;
+}
+
+.incorrect{
+   background: rgb(173, 112, 112);
 }
